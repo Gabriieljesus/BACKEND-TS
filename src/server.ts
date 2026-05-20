@@ -1,6 +1,9 @@
-import app from './app';
+import app from './app.js';
+import dotenv from 'dotenv';
 
-const PORT = 3001;
+dotenv.config();
+
+const PORT = Number(process.env.PORT);
 
 const startServer = async () => {
   try {
